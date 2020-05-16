@@ -1,0 +1,27 @@
+server:
+  port: 8090
+  
+spring:
+  application:
+    name: api-gateway
+    
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+security:
+  oauth2:
+    client:
+      id: auth_id
+      client-secret: auth_secret
+    resource:
+      jwt:
+        key-value: jwt_secret_key # authorization server와 동일하게 셋팅해야 함      
+
+zuul:
+  routes:
+    meet-service: /api/meet/**
+  sensitive-headers:
+  - Cookie
+  - Set-Cookie
