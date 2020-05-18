@@ -21,7 +21,8 @@ security:
 
 zuul:
   routes:
-    meet-service: /api/meet/**
+    meet-service:
+      path: /api/meet/**
   sensitive-headers:
   - Cookie
   - Set-Cookie
