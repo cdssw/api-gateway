@@ -22,9 +22,21 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
+	private static final String[] WHITE_LIST = {
+			"/v2/api-docs",
+			"/swagger-resources",
+			"/swagger-resources/**",
+			"/swagger-ui.html",
+			"/webjars/**",
+			"/h2-console/**",
+			"/*/v2/api-docs",
+			"/actuator/**"
+	};
+	
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/api/meet").authenticated();
+			.antMatchers(WHITE_LIST).permitAll() // white list만 허용
+			.anyRequest().authenticated(); // 그 외 요청은 access_token이 있어야 가능
 	}
 }

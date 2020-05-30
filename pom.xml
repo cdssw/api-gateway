@@ -79,6 +79,13 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		
+		<!-- actuator -->
+		<!-- 컨텍스트 빈, 자동설정, 환경설정, 메트릭 정보를 여러 Endpoint를 통해 볼수 있게 하는 기능 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 
 		<!-- Spring Cloud -->
 		<!-- Eureka Client -->
