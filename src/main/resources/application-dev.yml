@@ -8,7 +8,7 @@ spring:
 eureka:
   client:
     service-url:
-      default-zone: http://cdssw.duckdns.org:8761/eureka/
+      default-zone: http://cdssw.duckdns.org:8761
 
 security:
   oauth2:
