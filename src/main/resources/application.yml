@@ -6,11 +6,9 @@ spring:
     name: api-gateway # eureka에 등록되는 service id
     
 eureka:
-  instance:
-    prefer-ip-address: true
   client:
-    service-url:
-      default-zone: http://eureka-server:8761/eureka/
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
 
 security:
   oauth2:
