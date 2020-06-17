@@ -1,3 +1,9 @@
+spring:
+  profiles:
+    active:
+    - dev
+
+---
 server:
   port: 8090
   
@@ -5,11 +11,6 @@ spring:
   application:
     name: api-gateway # eureka에 등록되는 service id
     
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka/
-
 security:
   oauth2:
     client:
@@ -18,7 +19,7 @@ security:
     resource:
       jwt:
         key-value: jwt_secret_key # authorization server와 동일하게 셋팅해야 함      
-
+    
 zuul:
   ignored-services: '*' # eureka에 등록된 모든 서비스를 zuul은 자동 등록하기 때문에 해당 서비스를 제외시킨다
   routes: # 명시적으로 지정한 서비스만 zuul에 등록
