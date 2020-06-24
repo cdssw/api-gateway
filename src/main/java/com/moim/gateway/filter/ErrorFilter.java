@@ -5,6 +5,19 @@ import com.netflix.zuul.context.RequestContext;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * ErrorFilter.java
+ * 
+ * @author cdssw
+ * @since 2020. 6. 5.
+ * @description  
+ * 
+ * <pre>
+ * since          author           description
+ * ===========    =============    ===========================
+ * 2020. 6. 5.    cdssw            최초 생성
+ * </pre>
+ */
 @Slf4j
 public class ErrorFilter extends ZuulFilter {
  

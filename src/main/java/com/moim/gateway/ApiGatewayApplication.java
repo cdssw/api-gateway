@@ -52,9 +52,9 @@ public class ApiGatewayApplication {
 	}
 
 	// errorFilter 등록	
-	@Bean
-	public ErrorFilter errorFilter() {
-		return new ErrorFilter();
-	}
+//	@Bean
+//	public ErrorFilter errorFilter() {
+//		return new ErrorFilter();
+//	}
 
 }

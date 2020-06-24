@@ -16,13 +16,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * 6. 24, 2020    cdssw            최초 생성
  * </pre>
  */
-@Configuration
-public class WebConfig implements WebMvcConfigurer {
-
-	@Override
-	public void addCorsMappings(CorsRegistry registry) {
-		 registry.addMapping("/**")
-			.allowedOrigins("*")
-			.allowedMethods("*"); // method 허용
-	}
-}
+//@Configuration
+//public class WebConfig implements WebMvcConfigurer {
+//
+//	@Override
+//	public void addCorsMappings(CorsRegistry registry) {
+//		 registry.addMapping("/**")
+//			.allowedOrigins("*")
+//			.allowedMethods("*"); // method 허용
+//	}
+//}
