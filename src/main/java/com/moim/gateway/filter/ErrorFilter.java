@@ -8,8 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ErrorFilter extends ZuulFilter {
  
-    private final Logger log = LoggerFactory.getLogger(getClass());
-    
     @Override
     public String filterType() {
         return "error";
