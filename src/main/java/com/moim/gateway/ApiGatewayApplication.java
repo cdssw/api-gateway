@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import com.moim.gateway.filter.PostFilter;
 import com.moim.gateway.filter.PreFilter;
 import com.moim.gateway.filter.RouteFilter;
+import com.moim.gateway.filter.ErrorFilter;
 
 /**
  * ApiGatewayApplication.java
@@ -49,4 +50,11 @@ public class ApiGatewayApplication {
 	public RouteFilter routeFilter() {
 		return new RouteFilter();
 	}
+
+	// errorFilter 등록	
+	@Bean
+	public ErrorFilter errorFilter() {
+		return new ErrorFilter();
+	}
+
 }
