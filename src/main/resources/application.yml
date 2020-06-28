@@ -27,7 +27,6 @@ zuul:
       path: /meet/** # 경로를 지정
     user-service:
       path: /user/**
-      strip-prefix: false
   sensitive-headers: # routing 되기전에 해당 header를 제거하고 보냄
   - Cookie
   - Set-Cookie
