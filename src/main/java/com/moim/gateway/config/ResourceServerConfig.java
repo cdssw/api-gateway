@@ -40,6 +40,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 			.antMatchers(WHITE_LIST).permitAll() // white list만 허용
 			.antMatchers(HttpMethod.POST, "/user/signup/").permitAll() // 회원가입 허용
 			.antMatchers(HttpMethod.GET, "/user/check/**").permitAll() // 회원가입용 체크는 허용
+			.antMatchers(HttpMethod.POST, "/file/avatar").permitAll() // 회원가입용 체크는 허용
 			.anyRequest().authenticated(); // 그 외 요청은 access_token이 있어야 가능
 	}
 }
