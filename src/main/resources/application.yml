@@ -10,6 +10,10 @@ server:
 spring:
   application:
     name: api-gateway # eureka에 등록되는 service id
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB    
     
 security:
   oauth2:
