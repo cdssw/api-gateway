@@ -31,7 +31,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 			"/webjars/**",
 			"/h2-console/**",
 			"/*/v2/api-docs",
-			"/actuator/**"
+			"/actuator/**",
+			"/addr/**"
 	};
 	
 	@Override
