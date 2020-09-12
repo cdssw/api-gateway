@@ -42,6 +42,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 			.antMatchers(HttpMethod.POST, "/user/signup").permitAll() // 회원가입 허용
 			.antMatchers(HttpMethod.GET, "/user/check/**").permitAll() // 회원가입용 체크는 허용
 			.antMatchers(HttpMethod.POST, "/file/avatar").permitAll() // 아바타 허용
+			.antMatchers(HttpMethod.POST, "/file/images/path").permitAll() // 이미지 path 허용
+			.antMatchers(HttpMethod.GET, "/file/image").permitAll() // 이미지 허용
 			.antMatchers(HttpMethod.GET, "/meet/").permitAll() // 조회허용
 			.antMatchers(HttpMethod.POST, "/meet/search").permitAll() // 검색허용
 			.anyRequest().authenticated(); // 그 외 요청은 access_token이 있어야 가능
