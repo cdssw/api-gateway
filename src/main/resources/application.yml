@@ -38,7 +38,11 @@ zuul:
   sensitive-headers: # routing 되기전에 해당 header를 제거하고 보냄
   - Cookie
   - Set-Cookie
-  
+
+hystrix:
+  command:
+    default.execution.isolation.thread.timeoutInMilliseconds: 5000
+
 management:
   endpoints:
     web:
