@@ -34,14 +34,22 @@ zuul:
     file-service:
       path: /file/**
     addr-service:
-      path: /addr/**      
+      path: /addr/**
+        
   sensitive-headers: # routing 되기전에 해당 header를 제거하고 보냄
   - Cookie
   - Set-Cookie
 
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 11000
-ribbon.ConnectTimeout: 10000
-ribbon.ReadTimeout: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 7000
+
+ribbon:
+  ReadTimeout: 7000
 
 management:
   endpoints:
