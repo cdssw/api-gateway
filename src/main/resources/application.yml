@@ -35,6 +35,8 @@ zuul:
       path: /file/**
     addr-service:
       path: /addr/**
+    chat-service:
+      path: /chat/**
         
   sensitive-headers: # routing 되기전에 해당 header를 제거하고 보냄
   - Cookie
