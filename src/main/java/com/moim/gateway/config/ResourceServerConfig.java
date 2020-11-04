@@ -48,6 +48,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 			.antMatchers(HttpMethod.GET, "/meet/").permitAll() // 조회허용
 			.antMatchers(HttpMethod.GET, "/meet/**").permitAll() // 내용조회 허용
 			.antMatchers(HttpMethod.POST, "/meet/search").permitAll() // 검색허용
+			.antMatchers(HttpMethod.GET, "/chat/count/**").permitAll() // 채팅건수 조회 허용
 			.anyRequest().authenticated(); // 그 외 요청은 access_token이 있어야 가능
 	}
 }
